@@ -1,0 +1,11 @@
+HTML
+<p> -> Para colocar um paragrafo.
+<script> -> Para realizar um script em JS(Java Script)
+<br> -> Para mudar de linha
+
+JavaScript
+- setInterval() is a function in JavaScript that is used to repeatedly execute a given function at a specified interval. 
+It takes two arguments: the first argument is the function to be executed, and the second argument is the time interval (in milliseconds) between each execution.
+
+-The Date().getTime() method returns the number of milliseconds since January 1, 1970. 
+With that we manipulate the milliseconds to do the countdown.

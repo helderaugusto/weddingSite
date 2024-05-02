@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wedding WebSite</title>
+    <style>
+        #demo {
+            text-align: center;
+            background-image: url('brideandgroom.jpg');
+            color: white;
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: 70% 100%;
+            height: 40vh;
+        }
+        #countdownmain,#aboutus {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo">
+        <h1>Bride & Groom</h1>
+        <h2>30 of August 2024</h2>
+    </div>
+
+    <div id="countdownmain">
+        <h1>Countdown</h1>
+
+        <p id="countdown"></p>
+        <!-- Display the countdown timer in an element -->
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Aug 30, 2024 13:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function () {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="countdown"
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "You are MARRIED!";
+                }
+            }, 1000);
+        </script>
+    </div>
+    
+    <div id="aboutus">
+        <h1>About Us</h1>
+        <img src="bride.jpg" alt="My Image" style="margin-right: 10%;">
+        
+        <img src="groom.jpg" alt="My Image"><br>
+        Bride Groom
+    </div>
+    
+</body>
+
+</html>
